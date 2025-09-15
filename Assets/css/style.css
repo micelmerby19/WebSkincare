@@ -1,0 +1,269 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #d68bff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header .cart {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Logo & Search */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.top-bar h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-box input {
+  border: none;
+  padding: 8px 12px;
+  outline: none;
+  width: 200px;
+}
+
+.search-box button {
+  background: #eee;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* Navigation */
+nav {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #cba7ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.hero .label {
+  background: #8e52ff;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #ff2e63;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Product Section */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-transform: lowercase;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card .name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff2e63;
+}
+
+/* Promotion Section */
+.promotion {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.promotion img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container .about h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.footer-container .about h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #d68bff;
+  margin-bottom: 10px;
+}
+
+.footer-container .about p {
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-container .links h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-container .links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-container .links a:hover {
+  color: #d68bff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .search-box input {
+    width: 120px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-container .about p {
+    max-width: 100%;
+  }
+}
